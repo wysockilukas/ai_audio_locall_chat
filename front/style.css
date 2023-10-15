@@ -1,0 +1,65 @@
+
+
+.btn-record {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 300px
+    
+}
+
+
+
+
+
+#chatContainer {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f8f9fa;  /* Light gray background */
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.user {
+    background-color: #007BFF;  /* Blue for user messages */
+    color: white;
+    align-self: flex-end;
+    order: 2;
+    text-align: right;
+}
+
+.ai {
+    background-color: #e0e0e0;  /* Gray for AI messages */
+    align-self: flex-start;
+    order: 1;
+}
+
+/* Add a small triangle to the chat bubbles for a more chat-like appearance */
+.user::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #007BFF;
+}
+
+.ai::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #e0e0e0;
+}

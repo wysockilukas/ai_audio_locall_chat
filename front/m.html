@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Events</title>
+    <style>
+        #eventsList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="testButton">Przytrzymaj mnie</button>
+<div id="eventsList"></div>
+
+<script>
+
+
+
+
+const button = document.getElementById('testButton');
+const eventsList = document.getElementById('eventsList');
+
+const touchEvents = ['touchstart', 'touchend', 'touchmove'];
+const mouseEvents = ['mousedown', 'mouseup', 'mousemove'];
+
+touchEvents.forEach(eventType => {
+    button.addEventListener(eventType, (e) => {
+        e.preventDefault(); // Zapobieganie emulacji zdarzeń myszy
+        const div = document.createElement('div');
+        div.textContent = eventType;
+        eventsList.appendChild(div);
+    });
+});
+
+mouseEvents.forEach(eventType => {
+    button.addEventListener(eventType, (e) => {
+        const div = document.createElement('div');
+        div.textContent = eventType;
+        eventsList.appendChild(div);
+    });
+});
+
+
+
+
+
+</script>
+
+</body>
+</html>
