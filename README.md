@@ -57,8 +57,9 @@ AI Audio Local Chat is a web application that serves as an audio chatbot with ar
    ```
     This command starts the application on port 7861 and the API on port 5000. Access the application at   
     [http://localhost:7861/](http://localhost:7861/) or [http://localhost/webui/](http://localhost/webui/).   
-    Select a model from the list and click "load".  
-4. Start ngrok with the command 
+    Select a model from the list and click "load".
+   ![webui](https://github.com/wysockilukas/ai_audio_locall_chat/assets/42555510/0400e928-d9e8-4efc-a29d-cddd35c1e545)
+5. Start ngrok with the command 
    ```bash
     ngrok.exe http 80
    ```
